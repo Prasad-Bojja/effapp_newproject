@@ -50,6 +50,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = False
 #DEBUG = True
 ALLOWED_HOSTS = ['128.199.26.204']
+# Specify trusted origins for CSRF protection
+CSRF_TRUSTED_ORIGINS = [
+    'http://128.199.26.204',
+]
 
 #ALLOWED_HOSTS = []
 
