@@ -11,18 +11,22 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 import os
-from dotenv import load_dotenv
-load_dotenv()
+#from dotenv import load_dotenv
+#load_dotenv()
 
 # Load environment variables from .env file
 
-MERCHANT_ID= os.getenv('MERCHANT_ID')
-PHONE_PE_SALT = os.getenv('PHONE_PE_SALT')
-PHONE_PE_HOST = os.getenv('PHONE_PE_HOST')
-DJANGO_CUSTOM_REDIRECT_URL =os.getenv('DJANGO_CUSTOM_REDIRECT_URL')
-DJANGO_CUSTOM_CALLBACK_URL = os.getenv('DJANGO_CUSTOM_CALLBACK_URL')
+#MERCHANT_ID= os.getenv('MERCHANT_ID')
+#PHONE_PE_SALT = os.getenv('PHONE_PE_SALT')
+#PHONE_PE_HOST = os.getenv('PHONE_PE_HOST')
+#DJANGO_CUSTOM_REDIRECT_URL =os.getenv('DJANGO_CUSTOM_REDIRECT_URL')
+#DJANGO_CUSTOM_CALLBACK_URL = os.getenv('DJANGO_CUSTOM_CALLBACK_URL')
 
-
+MERCHANT_ID="PGTESTPAYUAT140"
+PHONE_PE_SALT="775765ff-824f-4cc4-9053-c3926e493514"
+PHONE_PE_HOST="https://api-preprod.phonepe.com/apis/pg-sandbox"
+DJANGO_CUSTOM_REDIRECT_URL="http://127.0.0.1:8000/payment-status/"
+DJANGO_CUSTOM_CALLBACK_URL="http://127.0.0.1:8000/webhook/"
 
 from pathlib import Path
 
@@ -34,7 +38,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+#SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = 'django-insecure-&wdb1cxng(xld22=@xjt^y5x#n#h0l@3@*)tr^#wyjk^h)gf45'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
