@@ -50,4 +50,3 @@ jobs:
             python manage.py collectstatic --noinput
             systemctl restart gunicorn
             systemctl restart nginx
-            
